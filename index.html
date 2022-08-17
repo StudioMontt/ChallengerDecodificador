@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Challenger - Decodificador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+
+            <img id="muneco" src="imagenes/muñeco.png">
+
+            <input type="text" id="codificado">
+            <textarea id="decodificado"cols="40" rows="20"></textarea>
+            <button type="button"id="botonCodif">Codificar</button>
+            <button type="button"id="botonDecodif">Decodificar</button>
+            <button type="button"id="botonCopiar">Copiar</button>
+        </main>
+    </body>
+</html>
+
+<script>
+    function codificar(){
+    
+        var oracion = document.getElementById("codificado").value;
+        var oracion=oracion.replace(/e/mgi, "enter");
+        var oracion=oracion.replace(/i/mgi, "imes");
+        var oracion=oracion.replace(/a/mgi, "ai");
+        var oracion=oracion.replace(/o/mgi, "ober");
+        var oracion=oracion.replace(/u/mgi, "ufat");
+
+        document.getElementById("decodificado").innerHTML = oracion;
+        document.getElementById("muneco").style.visibility = "hidden";
+    }
+    
+    function decodificar(){
+    
+        var oracion = document.getElementById("codificado").value;
+        var oracion=oracion.replace(/enter/mgi, "e");
+        var oracion=oracion.replace(/imes/mgi, "i");
+        var oracion=oracion.replace(/ai/mgi, "a");
+        var oracion=oracion.replace(/ober/mgi, "o");
+        var oracion=oracion.replace(/ufat/mgi, "u");
+
+        document.getElementById("decodificado").innerHTML = oracion;
+    }
+
+    function copiar(){
+        var copiado=document.querySelector("#decodificado");
+        copiado.select();
+        document.execCommand("copy");
+;
+    }
+
+    var click1=document.querySelector("#botonCodif");
+    var click2=document.querySelector("#botonDecodif");
+    var click3=document.querySelector("#botonCopiar");
+    
+    click1.onclick=codificar;
+    click2.onclick=decodificar;
+    click3.onclick=copiar;
+
+
+
+
+
+</script>
