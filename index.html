@@ -16,7 +16,7 @@
             <section class="ladoingreso">
                 <img id="logo" src="imagenes/LogoAlura.png" alt="Logo Alura">
 
-                <input type="text" id="codificado">
+                <input type="text" id="codificado" placeholder="Ingrese el texto aqui">
                 <p class="advertencia"><img src="imagenes/vector.png" height="70%">   Sólo letras minúsculas y sin tildes</p>
                 <div class="botones">
                     <button type="button"id="botonCodif">Codificar</button>
@@ -24,7 +24,7 @@
                 </div>
            </section>
            <section class="ladoresultado">
-                <div>
+                <div id="resultado">
                     <textarea id="decodificado"></textarea>
                     <button type="button"id="botonCopiar">Copiar</button>
                 </div>
@@ -52,9 +52,10 @@
         var oracion=oracion.replace(/a/mgi, "ai");
         var oracion=oracion.replace(/o/mgi, "ober");
         var oracion=oracion.replace(/u/mgi, "ufat");
-
         document.getElementById("decodificado").innerHTML = oracion;
-        document.getElementById("muneco").style.visibility = "hidden";
+        document.getElementById("muneco").style.display = "none";
+        document.getElementById("resultado").style.display = "show";
+        document.getElementById("resultado").style.display = "inherit";
     }
     
     function decodificar(){
@@ -65,8 +66,10 @@
         var oracion=oracion.replace(/ai/mgi, "a");
         var oracion=oracion.replace(/ober/mgi, "o");
         var oracion=oracion.replace(/ufat/mgi, "u");
-
         document.getElementById("decodificado").innerHTML = oracion;
+        document.getElementById("muneco").style.display = "none";
+        document.getElementById("resultado").style.display = "show";
+        document.getElementById("resultado").style.display = "inherit";
     }
 
     function copiar(){

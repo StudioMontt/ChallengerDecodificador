@@ -30,7 +30,8 @@ body{
 }
 
 .advertencia{
-	padding: 10px 100px;
+	padding: 10px;
+	margin-left: 100px;
 	font-size: x-small;
 	color: black;
 	height: 15px;
@@ -43,7 +44,7 @@ body{
 button{
 	width: 220px;
 	height: 50px;
-	border-radius: 12px;
+	border-radius: 16px;
 	margin: 10px 10px 40px;
 	border: 2px solid #0A3871;
 	color: blue;
@@ -69,6 +70,9 @@ button{
 	z-index: 1;
 }
 
+#resultado{
+	display: none;
+}
 #decodificado{
 	position: absolute;
 	width: 225px;
@@ -83,7 +87,7 @@ button{
 
 #muneco{
 	position: absolute;
-	width: 286px;
+	width: 287px;
 	height: 542px;
 	left: 630px;
 	top: 20px;
@@ -95,7 +99,7 @@ button{
 
 #muneco img{
 	width: 80%;
-	margin-top: 70px;
+	margin-top: 75px;
 }
 
 #muneco h3{
@@ -109,18 +113,6 @@ button{
 	margin-top: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 footer{
     text-align: center;
     background: url(imagenes/bg.jpg);
@@ -131,4 +123,38 @@ footer{
     color: #FFFFFF;
     font-size: 13px;
     margin: 5px;
+}
+
+@media screen and (max-width: 480px){
+	body{
+		width: auto;
+	}
+
+	.ladoingreso, .ladoresultado{
+		display: block;
+		width: 100%;
+	}
+
+	#codificado{
+		margin: 0 auto 250px;
+	}
+	.advertencia, .botones, #decodificado, #muneco{
+		margin: 5px auto;
+		text-align: center;
+	}
+
+	#decodificado, #muneco{
+		position: static;
+		height: 100px;
+		margin: 10px auto;
+		padding: 5px;
+	}
+
+	#muneco img{
+		display: none;
+	}
+
+	button{
+		margin: 2px auto;
+	}
 }
