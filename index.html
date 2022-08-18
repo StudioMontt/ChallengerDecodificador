@@ -13,16 +13,34 @@
 
     <body>
         <main>
+            <section class="ladoingreso">
+                <img id="logo" src="imagenes/LogoAlura.png" alt="Logo Alura">
 
-            <img id="muneco" src="imagenes/muñeco.png">
-
-            <input type="text" id="codificado">
-            <textarea id="decodificado"cols="40" rows="20"></textarea>
-            <button type="button"id="botonCodif">Codificar</button>
-            <button type="button"id="botonDecodif">Decodificar</button>
-            <button type="button"id="botonCopiar">Copiar</button>
+                <input type="text" id="codificado">
+                <p class="advertencia"><img src="imagenes/vector.png" height="70%">   Sólo letras minúsculas y sin tildes</p>
+                <div class="botones">
+                    <button type="button"id="botonCodif">Codificar</button>
+                    <button type="button"id="botonDecodif">Decodificar</button>
+                </div>
+           </section>
+           <section class="ladoresultado">
+                <div>
+                    <textarea id="decodificado"></textarea>
+                    <button type="button"id="botonCopiar">Copiar</button>
+                </div>
+                <div id="muneco">
+                    <img src="imagenes/muñeco.png" alt="Imagen niño observando un diamante">
+                    <h3>Ningún mensaje fue encontrado</h3>
+                    <p>Ingresa el texto que desees codificar o decodificar.</p>
+                </div>
+           </section>
         </main>
     </body>
+    <footer>
+            <p class="copyrigth">&copy Creado por Marcelo Vargas P. (2022)</p>
+
+    </footer>
+
 </html>
 
 <script>
