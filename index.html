@@ -9,14 +9,15 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
         <main>
             <section class="ladoingreso">
-                <img id="logo" src="Imagenes/LogoAlura.png" alt="Logo Alura">
+                <img id="logo" src="Imagenes/LogoZ.png" alt="Logo Zelda">
 
-                <input type="text" id="codificado" placeholder="Ingrese el texto aqui">
+                <textarea id="codificado" placeholder="Ingrese el texto aqui"></textarea>
                 <p class="advertencia"><img src="Imagenes/Vector.png" height="70%">   Sólo letras minúsculas y sin tildes</p>
                 <div class="botones">
                     <button type="button"id="botonCodif">Codificar</button>
@@ -53,9 +54,9 @@
         var oracion=oracion.replace(/o/mgi, "ober");
         var oracion=oracion.replace(/u/mgi, "ufat");
         document.getElementById("decodificado").innerHTML = oracion;
-        document.getElementById("muneco").style.display = "none";
+    /*    document.getElementById("muneco").style.display = "none";*/
         document.getElementById("resultado").style.display = "show";
-        document.getElementById("resultado").style.display = "inherit";
+    /*    document.getElementById("resultado").style.display = "inherit";*/
     }
     
     function decodificar(){
@@ -67,7 +68,7 @@
         var oracion=oracion.replace(/ober/mgi, "o");
         var oracion=oracion.replace(/ufat/mgi, "u");
         document.getElementById("decodificado").innerHTML = oracion;
-        document.getElementById("muneco").style.display = "none";
+    /*    document.getElementById("muneco").style.display = "none";*/
         document.getElementById("resultado").style.display = "show";
         document.getElementById("resultado").style.display = "inherit";
     }
