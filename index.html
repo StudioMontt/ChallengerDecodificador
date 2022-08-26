@@ -2,45 +2,44 @@
 
 <html lang="es">
     
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Challenger - Decodificador</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Challenger - Decodificador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
 
-    </head>
+<body>
+    <main>
+        <section class="ladoingreso">
+            <img id="logo" src="Imagenes/LogoZ.png" alt="Logo Zelda">
 
-    <body>
-        <main>
-            <section class="ladoingreso">
-                <img id="logo" src="Imagenes/LogoZ.png" alt="Logo Zelda">
-
-                <textarea id="codificado" placeholder="Ingrese el texto aqui"></textarea>
+            <textarea id="codificado" placeholder="Ingrese el texto aqui"></textarea>
                 <p class="advertencia"><img src="Imagenes/Vector.png" height="70%">   Sólo letras minúsculas y sin tildes</p>
-                <div class="botones">
-                    <button type="button"id="botonCodif">Codificar</button>
-                    <button type="button"id="botonDecodif">Decodificar</button>
-                </div>
-           </section>
-           <section class="ladoresultado">
-                <div id="resultado">
-                    <textarea id="decodificado"></textarea>
+            <div class="botones">
+                <button type="button"id="botonCodif">Codificar</button>
+                <button type="button"id="botonDecodif">Decodificar</button>
+            </div>
+        </section>
+        <section class="ladoresultado">
+            <div id="resultado">
+                <textarea id="decodificado"></textarea>
                     <button type="button"id="botonCopiar">Copiar</button>
-                </div>
-                <div id="muneco">
-                    <img src="Imagenes/Muñeco.png" alt="Imagen niño observando un diamante">
+            </div>
+            <div id="muneco">
+                    <img src="Imagenes/LinkOjo.png" alt="Imagen Link co consola Sheikah">
                     <h3>Ningún mensaje fue encontrado</h3>
                     <p>Ingresa el texto que desees codificar o decodificar.</p>
-                </div>
-           </section>
-        </main>
-    </body>
-    <footer>
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
             <p class="copyrigth">&copy Creado por Marcelo Vargas P. (2022)</p>
 
-    </footer>
+</footer>
 
 </html>
 
@@ -54,9 +53,9 @@
         var oracion=oracion.replace(/o/mgi, "ober");
         var oracion=oracion.replace(/u/mgi, "ufat");
         document.getElementById("decodificado").innerHTML = oracion;
-    /*    document.getElementById("muneco").style.display = "none";*/
+        document.getElementById("muneco").style.display = "none";
         document.getElementById("resultado").style.display = "show";
-    /*    document.getElementById("resultado").style.display = "inherit";*/
+        document.getElementById("resultado").style.display = "inherit";
     }
     
     function decodificar(){
@@ -68,7 +67,7 @@
         var oracion=oracion.replace(/ober/mgi, "o");
         var oracion=oracion.replace(/ufat/mgi, "u");
         document.getElementById("decodificado").innerHTML = oracion;
-    /*    document.getElementById("muneco").style.display = "none";*/
+        document.getElementById("muneco").style.display = "none";
         document.getElementById("resultado").style.display = "show";
         document.getElementById("resultado").style.display = "inherit";
     }
@@ -77,7 +76,8 @@
         var copiado=document.querySelector("#decodificado");
         copiado.select();
         document.execCommand("copy");
-;
+        document.getElementById("codificado").innerHTML = "";
+        document.getElementById("decodificado").innerHTML = "";
     }
 
     var click1=document.querySelector("#botonCodif");
